@@ -1,28 +1,14 @@
 import React from "react";
-import { useState } from "react";
-
+import Counter from "./counter";
+import TodoApp from "./todoApp";
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-     <CustomButton count={count} setCount={setCount}></CustomButton>
+    <Counter/>
+    <TodoApp/>
     </div>
   );
-}
-
-function CustomButton(props) {
-
-  //let count = 0;
-  function onClickHandler() {
-    props.setCount(props.count + 1)
-  }
-
-  return(
-    <button onClick={onClickHandler}>
-    {props.count}
-    </button>
-  )
 }
 
 export default App;
